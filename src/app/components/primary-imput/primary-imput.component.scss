@@ -8,23 +8,36 @@
     .input-content {
         width: 100%;
         border-radius: 8px;
+        display: flex;
+
+        label {
+            margin-bottom: 10px;
+        }
 
 
         .icon {
             padding: 12px;
-            primary-color: $primary-color;
+            background-color: $primary-color;
+            border-radius: 0 8px 8px 0;
+
+            img {
+                height: 20px;
+                
+
+            }
 
         }
-
+        
         input {
             border: none;
-            border-radius: 8px;
+            border-radius: 8px 0 0 8px;
             background-color: $gray-secondary-bg;
-
             padding: 12px 0 12px 20px;
             width: 100%;
 
         }
+
+
     }
 
 

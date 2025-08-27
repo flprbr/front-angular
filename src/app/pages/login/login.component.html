@@ -4,6 +4,24 @@
     secondaryBtnText="Signup Now"
 >
     <form [formGroup]="loginForm">
-        <app-primary-imput></app-primary-imput>
+        <app-primary-imput
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="exemplo@gmail.com"
+        > 
+            <img src="/assets/svg/email-icon.svg"/>
+        </app-primary-imput>
+        <app-primary-imput
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Your Password"
+            
+        > 
+            <img src="/assets/svg/password-icon.svg"/>
+        </app-primary-imput>
+        <span>Forgot Password?</span>
     </form>
 </app-default-login-layout>
