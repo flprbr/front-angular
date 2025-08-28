@@ -1,7 +1,10 @@
+@import 'ngx-toastr/toastr';
+
 *{
     margin: 0;
     padding: 0;
     background-origin: border-box;
+    font-family: "Poppin", sans-serif;
 }/* You can add global styles to this file, and also import other style files */
 
 body, html{

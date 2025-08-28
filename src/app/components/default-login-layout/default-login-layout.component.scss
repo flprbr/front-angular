@@ -47,6 +47,8 @@ main {
             width: 100%;
             gap: 30px;
 
+
+
             .divider {
                 display: flex;
                 font-size: 14px;
@@ -57,10 +59,11 @@ main {
                 color: $gray-bg;
                 width: 100%;
 
-                div{
+                div {
                     flex-grow: 1;
                     height: 1px;
-                    background-color: $gray-bg; ;
+                    background-color: $gray-bg;
+                    ;
 
                 }
             }
@@ -74,6 +77,10 @@ main {
                 background-color: transparent;
                 padding: 12px 24px;
                 cursor: pointer;
+
+                &:disabled {
+                    opacity: 0.8;
+                }
 
                 &.btn-primary {
                     background-color: $primary-color ;
