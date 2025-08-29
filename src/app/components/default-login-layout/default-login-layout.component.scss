@@ -18,9 +18,17 @@ main {
 
 
     .main-section {
+        height: 100vh;
         gap: 8px;
         flex-grow: 1;
         background-color: $gray-bg ;
+
+        img {
+            width: auto;
+            height: 30rem;
+            margin-bottom: 20px;
+        }
+
     }
 
     .form-section {
@@ -45,7 +53,7 @@ main {
             align-items: center;
             justify-content: center;
             width: 100%;
-            gap: 30px;
+            gap: 15px;
 
 
 

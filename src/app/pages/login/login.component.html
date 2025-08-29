@@ -1,18 +1,18 @@
 <app-default-login-layout
-    title="Login into your account"
-    primaryBtnText="Login Now"
-    secondaryBtnText="Signup Now"
+    title="Faça seu Login"
+    primaryBtnText="Login"
+    secondaryBtnText="Cadastre-se"
     (submit)="submit()"
     (navigate)="navigate()"
     [disablePrimaryBtn]="loginForm.invalid"
 >
     <form [formGroup]="loginForm">
         <app-primary-imput
-            formControlName="email"
-            inputName="email"
-            type="email"
-            label="Email"
-            placeholder="exemplo@gmail.com"
+            formControlName="user"
+            inputName="user"
+            type="text"
+            label="Usuario"
+            placeholder="Seu usuario"
         > 
             <img src="/assets/svg/email-icon.svg"/>
         </app-primary-imput>
@@ -20,11 +20,11 @@
             formControlName="password"
             inputName="password"
             type="password"
-            label="Your Password"
+            label="Sua Senha"
             
         > 
             <img src="/assets/svg/password-icon.svg"/>
         </app-primary-imput>
-        <span>Forgot Password?</span>
+        <span>Esqueceu sua senha?</span>
     </form>
 </app-default-login-layout>

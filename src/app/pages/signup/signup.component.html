@@ -1,0 +1,47 @@
+<app-default-login-layout
+    title="Cadastre-se"
+    primaryBtnText="Signup Now"
+    secondaryBtnText="Login Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="signupForm.invalid"
+>
+    <form [formGroup]="signupForm">
+        <app-primary-imput
+            formControlName="name"
+            inputName="name"
+            type="text"
+            label="Seu Nome"
+            placeholder="João " 
+        > 
+            <img src="/assets/svg/email-icon.svg"/>
+        </app-primary-imput>
+        <app-primary-imput
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="exemplo@gmail.com"
+        > 
+            <img src="/assets/svg/email-icon.svg"/>
+        </app-primary-imput>
+        <app-primary-imput
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Your Password"
+            
+        > 
+            <img src="/assets/svg/password-icon.svg"/>
+        </app-primary-imput>
+        <app-primary-imput
+            formControlName="passwordConfirm"
+            inputName="passwordConfirm"
+            type="password"
+            label="Confirme sua Senha"
+            
+        > 
+            <img src="/assets/svg/password-icon.svg"/>
+        </app-primary-imput>
+    </form>
+</app-default-login-layout>
