@@ -8,12 +8,12 @@ import { tap } from 'rxjs';
 })
 export class LoginService {
 
-  apiUrl = 'http://192.168.1.165:8080/api/auth/login';
+  apiUrl = 'http://192.168.1.165:8080/api/auth';
 
   constructor(private httpClient: HttpClient) { }
 
   login(user: string, password: string) {
-    return this.httpClient.post<LoginResponse>(this.apiUrl, { user, password }).pipe(
+    return this.httpClient.post<LoginResponse>(this.apiUrl + "/login", { user, password }).pipe(
       tap((value) => {
         sessionStorage.setItem('auth-token', value.token);
         sessionStorage.setItem('username', value.usuario);
@@ -23,8 +23,8 @@ export class LoginService {
 
   }
 
-  Signup(user: string, password: string) {
-    return this.httpClient.post<LoginResponse>(this.apiUrl, { user, password }).pipe(
+  signup(username: string, password: string, fullName: string, role: string, cpf?: string, canSign?: boolean) {
+    return this.httpClient.post<LoginResponse>(this.apiUrl + "/register", { username, password, fullName, role, cpf, canSign }).pipe(
       tap((value) => {
         sessionStorage.setItem('auth-token', value.token);
         sessionStorage.setItem('username', value.usuario);

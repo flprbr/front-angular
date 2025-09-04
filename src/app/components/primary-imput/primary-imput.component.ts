@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input, input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
-type InputTypes = 'text' | 'email' | 'password'
+type InputTypes = 'text' | 'email' | 'password' 
 
 @Component({
   selector: 'app-primary-imput',
@@ -20,7 +20,8 @@ type InputTypes = 'text' | 'email' | 'password'
   styleUrl: './primary-imput.component.scss'
 })
 export class PrimaryImputComponent implements ControlValueAccessor {
-  @Input() type: InputTypes = 'text';@Input() formName: string = " ";
+  @Input() type: InputTypes = 'text';
+  @Input() formName: string = " ";
   @Input() placeholder: string = " ";
   @Input() label: string = " ";
   @Input() inputName: string = " ";

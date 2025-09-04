@@ -8,20 +8,42 @@
 >
     <form [formGroup]="signupForm">
         <app-primary-imput
-            formControlName="name"
-            inputName="name"
-            type="text"
-            label="Seu Nome"
-            placeholder="João " 
-        > 
-            <img src="/assets/svg/email-icon.svg"/>
+        formControlName="fullName"
+        inputName="fullName"
+        type="text"
+        label="Nome Completo"
+        placeholder="João da Silva"
+        >
+        <img src="/assets/svg/email-icon.svg"/>
         </app-primary-imput>
         <app-primary-imput
-            formControlName="email"
-            inputName="email"
-            type="email"
-            label="Email"
-            placeholder="exemplo@gmail.com"
+        formControlName="role"
+        inputName="role"
+        type="text"
+        label="Cargo"
+        placeholder="Fisioterapeuta"
+        >
+        <img src="/assets/svg/email-icon.svg"/>
+        </app-primary-imput>
+        <app-primary-imput
+        formControlName="cpf"
+        inputName="cpf"
+        type="text"
+        label="CPF"
+        >
+        <img src="/assets/svg/email-icon.svg"/>
+        </app-primary-imput>
+        <!-- Adicione este campo dentro do <form> -->
+        <label>
+        <input type="checkbox" formControlName="canSign" />
+        Pode Assinar?
+        </label>
+        <app-primary-imput
+            formControlName="username"
+            inputName="username"
+            type="text"
+            label="User"
+            placeholder="João" 
         > 
             <img src="/assets/svg/email-icon.svg"/>
         </app-primary-imput>
@@ -43,5 +65,7 @@
         > 
             <img src="/assets/svg/password-icon.svg"/>
         </app-primary-imput>
+        
+        
     </form>
 </app-default-login-layout>

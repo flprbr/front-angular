@@ -7,10 +7,13 @@ import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
 
 interface SignupForm {
-  name: FormControl,
-  email: FormControl,
+  username: FormControl,
   password: FormControl,
-  passwordConfirm: FormControl
+  passwordConfirm: FormControl,
+  fullName: FormControl,
+  role: FormControl,
+  cpf: FormControl,
+  canSign: FormControl
 }
 
 @Component({
@@ -28,7 +31,7 @@ interface SignupForm {
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
-   signupForm!: FormGroup<SignupForm>;
+  signupForm!: FormGroup<SignupForm>;
 
 
   constructor(
@@ -38,20 +41,37 @@ export class SignupComponent {
 
   ) {
     this.signupForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      email: new FormControl('', [Validators.required, Validators.email]),
+      username: new FormControl('', [Validators.required,]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(6)])
+      passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      fullName: new FormControl('', [Validators.required]),
+      role: new FormControl('', [Validators.required]),
+      cpf: new FormControl('', [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
+      canSign: new FormControl(false)
     });
 
   }
 
   submit() {
-  this.loginService.login(this.signupForm.value.email, this.signupForm.value.password).subscribe({
-    next: () => this.toastService.success("Login successful"),
-    error: () =>this.toastService.error("Erro Inesperado! Tente novamente mais tarde."),
-  })  
-}
+    this.loginService.signup(
+      this.signupForm.value.username,
+      this.signupForm.value.password,
+      this.signupForm.value.fullName,
+      this.signupForm.value.role,
+      this.signupForm.value.cpf,
+      this.signupForm.value.canSign
+    ).subscribe({
+      next: () => {
+        this.toastService.success("Login successful")
+       
+
+      },
+      error: (err) => {
+        console.error('Signup error:', err);
+        this.toastService.error("Erro Inesperado! Tente novamente mais tarde.");
+      },
+    });
+  }
 
   navigate() {
     this.router.navigate(["login"]);
