@@ -10,7 +10,7 @@ interface LoginForm {
   user: FormControl,
   password: FormControl
 }
-
+  
 
 @Component({
   selector: 'app-login',

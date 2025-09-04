@@ -1,0 +1,123 @@
+@import '../../../styles/variables.scss';
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  &-container {
+    padding: 0 1rem;
+    
+    @media (min-width: 640px) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (min-width: 640px) {
+    gap: 2rem;
+  }
+}
+
+.logo-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #171717;
+  border-radius: 0.25rem;
+}
+
+.logo-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #171717;
+}
+
+.navigation {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.nav-item {
+  color: $header-text-color;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+  text-decoration: none;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $header-text-color;
+  }
+
+  &:hover {
+    color: #171717;
+  }
+
+  &.active {
+    color: #171717;
+    font-weight: 500;
+  }
+}
+
+.actions-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (min-width: 640px) {
+    gap: 1rem;
+  }
+}
+
+.action-button {
+  padding: 0.5rem;
+  color: #4b5563;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #171717;
+  }
+
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.action-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.user-avatar {
+  width: 2rem;
+  height: 2rem;
+  background-color: $primary-color;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-initials {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #ffffff;
+}
