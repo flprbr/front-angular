@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IPatientService } from './patient.service.interface';
-import { Patient } from '../../types/patient.type';
 import { environment } from '../../../environments/environment';
+import { Patient } from '../../features/auth/types/patient.type';
 
 @Injectable({
   providedIn: 'root'

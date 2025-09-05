@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Patient } from '../../types/patient.type';
+import { Patient } from '../../features/auth/types/patient.type';
 
 export interface IPatientService {
   getPatientById(id: string): Observable<Patient>;

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { IPatientService } from './patient.service.interface';
-import { Patient } from '../../types/patient.type';
 import { environment } from '../../../environments/environment';
+import { Patient } from '../../features/auth/types/patient.type';
 
 interface OldApiResponse {
   status: string;
