@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { DefaultLoginLayoutComponent } from '../../components/default-login-layout/default-login-layout.component';
+import { DefaultLoginLayoutComponent } from '../../../../shared/default-login-layout/default-login-layout.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { PrimaryImputComponent } from '../../components/primary-imput/primary-imput.component';
 import { Router } from '@angular/router';
-import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
+import { PrimaryImputComponent } from '../../../../shared/primary-imput/primary-imput.component';
+import { LoginService } from '../../../../services/login.service';
 
 interface SignupForm {
   username: FormControl,

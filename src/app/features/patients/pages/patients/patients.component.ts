@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
-import { MainLayoutComponent } from '../../components/main-layout/main-layout.component';
+import { MainLayoutComponent } from '../../../../shared/main-layout/main-layout.component';
+import { SearchBarComponent } from '../../../../shared/search-bar/search-bar.component';
+
 
 @Component({
   selector: 'app-patients',

@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@import '../../../../../styles/variables.scss';
 
 form {
     width: 100%;
@@ -12,6 +12,7 @@ form {
         text-decoration: underline;
         color: $secondary-color;
         text-align: end;
+        
     }
 }
 
