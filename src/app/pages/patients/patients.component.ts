@@ -6,7 +6,10 @@ import { IPatientService } from '../../services/patient/patient.service.interfac
 @Component({
   selector: 'app-patients',
   standalone: true,
-  imports: [],
+  imports: [
+    MainLayoutComponent,
+    SearchBarComponent
+  ],
   templateUrl: './patients.component.html',
   styleUrl: './patients.component.scss'
 })
