@@ -4,7 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { PrimaryImputComponent } from '../../../../shared/primary-imput/primary-imput.component';
-import { LoginService } from '../../../../services/login.service';
+import { LoginService } from '../../../../services/login/login.service';
 
 interface SignupForm {
   username: FormControl,
